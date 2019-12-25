@@ -7,7 +7,6 @@ export default class Medication extends Component {
     super(props);
 
     this.state = {
-      isOpen: false,
       id: this.props.id,
       name: this.props.name,
       importantInfo: this.props.importantInfo,
@@ -25,6 +24,19 @@ export default class Medication extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+  };
+
+  handleSubmit = () => {
+    const url = "http://localhost:8080/api/medicin-infos";
+    axios
+      .put(url, this.state, { headers: { "Content-Type": "application/json" } })
+      .then(response => {
+        console.log(response);
+        this.setState({ state: response });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
 
   render() {
@@ -142,13 +154,13 @@ export default class Medication extends Component {
                         </div>
                       </div>
                       <Button
-                      // type="submit"
-                      // onClick={this.toggle}
-                      // className={
-                      //   editItem
-                      //     ? "btn btn-block btn-success mt-3"
-                      //     : "btn btn-block btn-primary mt-3"
-                      // }
+                        type="submit"
+                        onClick={this.toggle}
+                        // className={
+                        //   editItem
+                        //     ? "btn btn-block btn-success mt-3"
+                        //     : "btn btn-block btn-primary mt-3"
+                        // }
                       >
                         add
                         {/* {editItem ? "edit item" : "add item"} */}

@@ -26,7 +26,7 @@ class MedicationInput extends Component {
   };
 
   handleSubmit = event => {
-    event.preventDefault();
+    // event.preventDefault();
     axios
       .post("http://localhost:8080/api/medicin-infos", this.state)
       .then(response => {

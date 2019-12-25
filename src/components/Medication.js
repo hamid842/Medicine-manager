@@ -66,112 +66,107 @@ export default class Medication extends Component {
             >
               <i className="fas fa-trash"></i>
             </span>
-            <div>
-              <Collapse isOpen={isOpen}>
-                <Card>
-                  <CardBody>
-                    <form onSubmit={this.handleSubmit}>
-                      <div className="modal-body">
-                        <div className="form-group">
-                          <label className="text-uppercase">Id</label>
-                          <input
-                            type="text"
-                            name="id"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={id}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Name</label>
-                          <input
-                            type="text"
-                            name="name"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={name}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Important Information</label>
-                          <input
-                            type="text"
-                            name="importantInfo"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={importantInfo}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Usage</label>
-                          <input
-                            type="text"
-                            name="usage"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={usage}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Initial Count</label>
-                          <input
-                            type="text"
-                            name="initialCount"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={initialCount}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Promised</label>
-                          <input
-                            type="text"
-                            name="promised"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={promised}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Refill Information</label>
-                          <input
-                            type="text"
-                            name="refillInfo"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={refillInfo}
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label>Pharmacy Notes</label>
-                          <input
-                            type="text"
-                            name="pharmacyNotes"
-                            className="form-control"
-                            onChange={this.handleChange}
-                            value={pharmacyNotes}
-                          />
-                        </div>
-                      </div>
-                      <Button
-                        type="submit"
-                        onClick={this.toggle}
-                        // className={
-                        //   editItem
-                        //     ? "btn btn-block btn-success mt-3"
-                        //     : "btn btn-block btn-primary mt-3"
-                        // }
-                      >
-                        add
-                        {/* {editItem ? "edit item" : "add item"} */}
-                      </Button>
-                    </form>
-                  </CardBody>
-                </Card>
-              </Collapse>
-            </div>
           </div>
         </li>
+        <div>
+          <Collapse isOpen={isOpen}>
+            <Card>
+              <CardBody>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="modal-body">
+                    <div className="form-group">
+                      <label className="text-uppercase">Id</label>
+                      <input
+                        type="text"
+                        name="id"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={id}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={name}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Important Information</label>
+                      <input
+                        type="text"
+                        name="importantInfo"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={importantInfo}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Usage</label>
+                      <input
+                        type="text"
+                        name="usage"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={usage}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Initial Count</label>
+                      <input
+                        type="text"
+                        name="initialCount"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={initialCount}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Promised</label>
+                      <input
+                        type="text"
+                        name="promised"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={promised}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Refill Information</label>
+                      <input
+                        type="text"
+                        name="refillInfo"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={refillInfo}
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Pharmacy Notes</label>
+                      <input
+                        type="text"
+                        name="pharmacyNotes"
+                        className="form-control"
+                        onChange={this.handleChange}
+                        value={pharmacyNotes}
+                      />
+                    </div>
+                  </div>
+                  <Button
+                    type="submit"
+                    onClick={this.toggle}
+                    className="btn btn-success btn-block"
+                  >
+                    Edit & Add
+                  </Button>
+                </form>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </div>
       </div>
     );
   }
